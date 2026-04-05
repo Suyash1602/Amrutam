@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors from Figma */
+  --color-primary: #3a643c; /* Main Green */
+  --color-primary-dark: #33643f; /* Darker Green for Headings */
+  --color-primary-light: #4e7c43; /* Success Green in UI cards */
+  --color-accent: #ffe6a5; /* Yellow used in blobs/icons */
+  --color-bg-light: #fff7e2; /* The main background cream color */
+  --color-bg-yellow: #fff6dd; /* Hero Background */
+  --color-bg-cream: #fff8e6; /* Section backgrounds */
+  --color-bg-card: #ffeec3; /* Subtle card backgrounds */
+
+  /* Text Colors */
+  --color-dark: #0c0c0c; /* Heavy black headings */
+  --color-grey-dark: #474747; /* Nav text */
+  --color-grey-medium: #666666; /* Description text */
+  --color-grey-light: #4c4c4c; /* Subtext */
+
+  /* Widths */
+  --width-container: 1275px;
+  --width-figma: 1440px;
+
+  /* Typography */
+  --font-dm: "DM Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-dm bg-white text-dark;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-dm font-bold text-primary-dark;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: var(--width-container);
+    @apply mx-auto px-4;
+  }
+}
